@@ -1,4 +1,2 @@
-export * from './environments/environment';
-export * from './app.component';
-export * from './app.module';
-
+export {AppModule} from './app.module';
+export {RecipeBookAppComponent} from './recipe-book.component';

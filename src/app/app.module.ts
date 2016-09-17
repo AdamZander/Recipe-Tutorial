@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent }  from './app.component';
+import { RecipeBookAppComponent } from "./recipe-book.component";
 import { HeaderComponent } from "./header.component";
 import { DropdownDirective } from "./dropdown.directive";
 import { ShoppingListAddComponent } from "./shopping-list/shopping-list-add.component";
@@ -10,28 +10,25 @@ import { RecipesComponent } from "./recipes/recipes.component";
 import { RecipeListComponent } from "./recipes/recipe-list/recipe-list.component";
 import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.component";
 import { RecipeItemComponent } from "./recipes/recipe-list/recipe-item.component";
-import {ShoppingListService} from "./shopping-list/shopping-list.service";
-import {RecipeService} from "./recipes/recipe.service";
-
-
-
+import { ShoppingListService } from "./shopping-list/shopping-list.service";
+import { RecipeService } from "./recipes/recipe.service";
 
 @NgModule({
-  imports: [ BrowserModule ],
   declarations: [
-    AppComponent,
+    RecipeBookAppComponent,
     HeaderComponent,
+    DropdownDirective,
+    ShoppingListAddComponent,
+    ShoppingListComponent,
     RecipesComponent,
     RecipeListComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
-    RecipeDetailComponent,
-    ShoppingListComponent,
-    ShoppingListAddComponent,
-    DropdownDirective],
-
+  ],
+  imports: [
+    BrowserModule
+  ],
   providers: [ShoppingListService, RecipeService],
-  bootstrap:    [AppComponent]
+  bootstrap: [RecipeBookAppComponent]
 })
-
 export class AppModule {}

@@ -1,4 +1,6 @@
-export class RecipeBookPage {
+import { browser, element, by } from 'protractor/globals';
+
+export class CompleteGuideFinalWebpackPage {
   navigateTo() {
     return browser.get('/');
   }
